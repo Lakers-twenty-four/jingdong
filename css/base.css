@@ -1,0 +1,44 @@
+body,
+a,
+div,
+img,
+input,
+ul,
+li,
+span,
+h4,
+p,
+i {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  color: #fff;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+/*# sourceMappingURL=base.css.map */

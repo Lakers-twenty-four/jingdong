@@ -1,0 +1,445 @@
+/* 头部部分开始 */
+
+.header {
+    display: flex;
+    position: fixed;  
+    width: 100%;
+    height: 40px;
+    background-color: rgba(201,21,35,0);
+    
+    z-index: 100;
+    .logo {
+        width: 70px;
+        background: url("../images/jd-sprites.png") -0 -105px;
+        background-size: 200px 200px;
+        background-origin: content-box;
+        background-clip: content-box;
+        padding: 6px;
+        text-indent: -999em;
+    }
+    .searchBox {
+        position: relative;
+        flex: 1;
+        padding: 6px;
+        .searchCon {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            padding-left: 40px;
+        }
+        /* 坑 */
+        &::before {
+            position: absolute;
+            top: 11px;
+            left: 18px;
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url("../images/jd-sprites.png") no-repeat -60px -110px;
+            background-size: 200px 200px;
+        }
+    }
+    .login {
+        float: right;
+        width: 50px;
+        line-height: 40px;
+        text-align: center;
+    }
+}
+
+/* 头部部分结束 */
+
+/* 轮播图部分开始 */
+.swiper-container {   
+    width: 100%;
+    img {
+        width: 100%;
+
+    }
+}
+/* 轮播图部分结束 */
+
+/* 导航部分开始 */
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        img {
+            width: 50%;
+        }
+        p {
+            color: #000;
+        }
+    }
+}
+
+/* 导航部分结束 */
+
+/* 掌上秒杀部分开始 */
+
+.killBox {
+    margin-top: 8px;
+    .kill-title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+        padding: 0 8px;
+        .clock-box {
+            display: flex;
+            .clock {
+                width: 18px;
+                height: 22px;
+                background: url("../images/jd-sprites.png") no-repeat -84px -110px;
+                background-size: 200px 200px;
+                margin-right: 4px;
+            }
+            .kill-font {
+                color: #c91523;
+                font-weight: bold;
+                margin-right: 12px;
+            }
+            .timer>span {
+                background-color: #000;
+                padding: 2px;
+            }
+            .timer>span:nth-child(3n) {
+                background: #fff;
+                color: #000;
+            }
+        }
+        .more-kill {
+            color: #000;
+        }
+    }
+    .kill-content {
+        li {
+            position: relative;
+            float: left;
+            width: 33.33333333%;
+            img {
+                width: 100%;
+            }
+            span {
+                color: #fff;
+                position: absolute;
+                background-color: #fdb60a;
+                top: 60%;
+                left: 62%;
+                border-radius: 25%;
+                width: 46px;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+/* 掌上秒杀部分结束 */
+
+/* 618节日部分开始 */
+
+.festival {
+    margin-top: 0px;
+    .festival_title {
+        position: relative;
+        ul {
+            position: absolute;
+            bottom: 0;
+            li {
+                width: 50%;
+                float: right;
+            }
+            li:nth-child(1) {
+                float: left;
+            }
+        }
+    }
+    .festival_content {
+        display: flex;
+        li {
+            float: left;
+            width: 50%;
+        }
+        li:nth-child(-n+3) {
+            width: 33.333333%;
+        }
+    }
+}
+
+/* 618节日部分结束 */
+
+/* 特色市场部分开始 */
+
+.market {
+    .market_title {
+        margin: 4px 0 4px 4px;
+        h4 {
+            color: #c91523;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    .market_content {
+        li {
+            float: left;
+            width: 50%;
+        }
+        li:nth-child(4) {
+            clear: both;
+        }
+    }
+}
+
+/* 特色市场部分结束 */
+
+/* 广告部分开始 */
+
+.adv {
+    a {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* 广告部分结束 */
+
+/* 主题街开始 */
+
+.theme_street {
+    .theme_street_title {
+        margin: 4px 0 4px 4px;
+        h4 {
+            color: #c91523;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    .theme_street_content {
+        li {
+            float: left;
+            width: 25%;
+        }
+        li:nth-child(-n+2) {
+            width: 50%;
+        }
+        li:nth-child(5) {
+            clear: both;
+        }
+    }
+}
+
+/* 主题街结束 */
+
+/* 品牌推荐部分开始 */
+
+.recommend {
+    .recommend_title {
+        margin: 4px 0 4px 4px;
+        h4 {
+            color: #c91523;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    .recommend_content {
+        li {
+            float: left;
+            width: 30%;
+            img {
+                width: 100%;
+            }
+        }
+        li:first-child {
+            width: 40%;
+        }
+    }
+}
+
+/* 品牌推荐部分结束 */
+
+/* 猜你喜欢部分开始 */
+
+.guess_you_like {
+    .guess_you_like_title {
+        display: flex;
+        justify-content: space-between;
+        margin: 4px 0 4px 4px;
+        h4 {
+            color: #c91523;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .look_same {
+            img {
+                display: inline-block;
+                width: 18px;
+                height: 16px;
+                vertical-align: middle;
+            }
+            p {
+                display: inline-block;
+                color: pink;
+                
+            }
+        }
+    }
+    .guess_you_like_content {
+        ul {
+            clear: both;
+            li {
+                float: left;
+                width: 50%;
+                border-bottom: 1px solid #ccc;
+                padding: 12px;
+                .con_title {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 16px;
+                    p {
+                        color: #c91523;
+                    }
+                    span {
+                        background-color: #ccc;
+                        color: #fff;
+                    }
+                }
+                .con {
+                    margin-top: 8px;
+                    img {
+                        margin: 0 auto;
+                        width: 80%;
+                    }
+                    p {
+                        color: #000;
+                        height: 40px;
+                        overflow: hidden;   
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 猜你喜欢部分结束 */
+
+/* 点击更多部分开始 */
+
+.more {
+    clear: both;
+    background-color: #f3f5f7;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+/* 点击更多部分结束 */
+
+/* 底部工具栏开始 */
+
+.footer_bar {
+    clear: both;
+    display: flex;
+    background-color: #f3f5f7;
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+    margin-bottom: 6px;
+    a {
+        flex: 1;
+        color: #666;
+        text-align: center;
+        border-right: 1px solid #000;
+    }
+    a:last-child {
+        border: none;
+    }
+}
+
+/* 底部工具栏结束 */
+
+/* app图标部分开始 */
+
+.app_icon {
+    clear: both;
+    display: flex;
+    background-color: #f3f5f7;
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+    margin-bottom: 6px;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        span {
+            background: url(../images/jd-sprites.png) -80px -69px;
+            background-size: 200px 200px;
+            width: 33px;
+            height: 34px;
+            display: inline-block;
+        }
+        p {
+            color: #000;
+        }
+    }
+    a:nth-child(1) {
+        span {
+            background: url(../images/jd-sprites.png) -40px -69px;
+            background-size: 200px 200px;
+        }
+    }
+    a:nth-child(3) {
+        span {
+            background: url(../images/jd-sprites.png) -120px -69px;
+            background-size: 200px 200px;
+        }
+    }
+}
+
+/* app图标部分结束 */
+
+/* 版权部分开始 */
+
+.copyRight {
+    text-align: center;
+    color: #000;
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+    margin-bottom: 74px;
+}
+
+/* 版权部分结束 */
+
+/* 底部菜单部分开始 */
+
+.footer {
+    //display: flex;//坑
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    a {
+        width: 20%;
+        float: left;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* 底部菜单部分结束 */
