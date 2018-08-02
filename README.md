@@ -1,11 +1,5 @@
 # 手机京东首页实例
 
-**目录：**
-
-[swiper.js](#1--swiperjs)
-
-[原生swiper](#2--原生swiper插件)
-
 ## 1  swiper.js
 
 ### 1.1  描述
@@ -286,6 +280,4 @@ function activeLi(tmpIndex) {
     indexer_lis[tmpIndex].classList.add("active");
 }
 ```
-
-
 
