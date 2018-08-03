@@ -3,13 +3,23 @@ div,
 ul,
 li,
 a,
-h2 {
+h2,
+i,
+input {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-li {
+img {
+    display: block;
+}
+
+i {
+    font-style: normal;
+}
+
+ul {
     list-style: none;
 }
 
@@ -18,3 +28,98 @@ a {
     color: #000;
 }
 
+input {
+    outline: none;
+    border: none;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_ac60twz5c17/iconfont.eot');
+    src: url('../font/font_ac60twz5c17/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/font_ac60twz5c17/iconfont.woff') format('woff'), url('../font/font_ac60twz5c17/iconfont.ttf') format('truetype'), url('../font/font_ac60twz5c17/iconfont.svg#iconfont') format('svg');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /* 初始化 body height:0
+    浏览器做的事，body一般就是整个屏幕的大小 */
+    height: 100%;
+    display: flex; //主轴方向，水平
+    flex-direction: column;
+    /* 头部部分开始 */
+    .header {
+        display: flex;
+        height: 40px;
+        .iconfont {
+            font-family: "iconfont";
+            font-size: 28px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .back {
+            width: 40px;
+            height: 40px;
+        }
+        .search {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+        .searchBox {
+            flex: 1;
+            border-radius: 32px;
+            padding: 5px 0;
+            input {
+                width: 100%;
+                height: 100%;
+                border-radius: 24px;
+                padding-left: 20px;
+                border: 1px solid #000;
+            }
+        }
+    }
+    /* 头部部分结束 */
+    /* 内容主体部分开始 */
+    .content {
+        display: flex;
+        flex: 1;
+        .left {
+            width: 80px;
+            height: 100%;
+            // 滚动效果是使用js来实现
+            overflow: hidden;
+            ul {
+                li {
+                    width: 80px;
+                    height: 40px;
+                    text-align: center;
+                    border-right: 1px solid #000;
+                    border-bottom: 1px solid #000;
+                    line-height: 40px;
+                }
+            }
+        }
+        .right {
+            flex: 1;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            h2 {   
+                font-size: 14px;
+            }
+            ul {
+
+                display: flex;
+                flex-wrap:wrap;
+                li {
+                    flex:33.33333%;
+                }
+            }
+        }
+    }
+    /* 内容主体部分结束 */
+}

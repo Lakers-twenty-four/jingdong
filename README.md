@@ -1,4 +1,4 @@
-# 手机京东首页实例
+# 1  手机京东首页实例
 
 > 目录：
 
@@ -285,5 +285,59 @@ function activeLi(tmpIndex) {
     }
     indexer_lis[tmpIndex].classList.add("active");
 }
+```
+
+# 2  京东分类页面
+
+## 1  第一步搭建基本框架：
+
+![](./mdImg/1.png)
+
+## 2  iscroll.js
+
+### 2.1  描述
+
+**iscroll**是一个高性能，资源占用少，无依赖，多平台的**javascript**
+
+
+
+### 2.2  在线网址
+
+[官方网站](http://cubiq.org/iscroll-5)
+
+[iscroll.js下载地址](https://github.com/cubiq/iscroll)
+
+[iscroll.js 中文API](https://www.kancloud.cn/kancloud/iscroll-api/77886)
+
+
+
+### 2.3  入门教程
+
+> 在你的页面中head标签下引入iscroll.js
+
+```js
+<!-- 引入iscroll.js -->
+<script src="./iscroll.js"></script>
+```
+
+> 编辑HTML结构注意iscroll作用于滚动区域的外层。只有容器元素的第一个子元素能进行滚动，其他子元素被忽略
+
+```html
+<div id="wrapper">
+    <!-- 要进行滚动的元素 -->
+    <ul>
+        <li>...</li>
+        <li>...</li>
+        ...
+    </ul>
+</div>
+```
+
+> js初始化
+
+```js
+<script type="text/javascript">
+var myScroll = new IScroll('#wrapper');
+</script>
 ```
 
